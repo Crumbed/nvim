@@ -22,13 +22,14 @@ o.undofile = true
 o.hlsearch = false
 o.incsearch = true
 
-o.termguicolors = true
+o.termguicolors = false
 
 o.scrolloff = 8
 o.signcolumn = "yes"
 o.isfname:append("@-@")
 
 o.updatetime = 50
+o.colorcolumn = "80"
 
 
 vim.api.nvim_set_option("clipboard", "unnamed")

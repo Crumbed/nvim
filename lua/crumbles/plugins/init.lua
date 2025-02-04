@@ -1,21 +1,19 @@
-
-
-
-
-
-
 return {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/playground",
-    "theprimeagen/refactoring.nvim",
     "nvim-treesitter/nvim-treesitter-context",
+    "theprimeagen/refactoring.nvim",
     "eandrju/cellular-automaton.nvim",
     "laytan/cloak.nvim",
     {
-        "github/copilot.vim",
-        enabled = true
+        "L3MON4D3/LuaSnip",
+        version = "v2.*",
+        run = "make install_jsregexp"
     },
-
+    {
+        "github/copilot.vim",
+        enabled = false
+    },
     {
         "mbbill/undotree",
         keys = {
