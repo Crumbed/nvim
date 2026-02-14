@@ -9,22 +9,19 @@
 return {
     {
         "theprimeagen/harpoon",
+        branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
-            require("harpoon"):setup()
+            local hp = require("harpoon")
+            hp:setup()
+
+            vim.keymap.set("n", "<leader>a", function() hp:list():add() end)
+            vim.keymap.set("n", "<leader>e", function() hp.ui:toggle_quick_menu(hp:list()) end)
+
+            vim.keymap.set("n", "<leader>1", function() hp:list():select(1) end)
+            vim.keymap.set("n", "<leader>2", function() hp:list():select(2) end)
+            vim.keymap.set("n", "<leader>3", function() hp:list():select(3) end)
+            vim.keymap.set("n", "<leader>4", function() hp:list():select(4) end)
         end,
-
-        keys = function() 
-            local mark = require("harpoon.mark")
-            local ui = require("harpoon.ui")
-
-            vim.keymap.set("n", "<leader>a", mark.add_file)
-            vim.keymap.set("n", "<leader>e", ui.toggle_quick_menu)
-
-            vim.keymap.set("n", "<leader>1", function() ui.nav_file(1) end)
-            vim.keymap.set("n", "<leader>2", function() ui.nav_file(2) end)
-            vim.keymap.set("n", "<leader>3", function() ui.nav_file(3) end)
-            vim.keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
-        end
     }
 }
