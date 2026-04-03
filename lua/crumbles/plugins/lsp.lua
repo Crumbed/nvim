@@ -63,6 +63,10 @@ function Setup()
 
             filetypes = { "c" },
         },
+        shopify_theme_ls = {
+            filetypes = { "liquid", "html", "css" },
+            root_markers = { "config/settings_schema.json", },
+        },
     }
 
     local servers_to_install = vim.tbl_filter(function(key)

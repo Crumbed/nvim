@@ -15,7 +15,7 @@ end
 return {
     "ThePrimeagen/vim-be-good",
     "nvim-lua/plenary.nvim",
-    "nvim-treesitter/playground",
+    -- "nvim-treesitter/playground",
     "theprimeagen/refactoring.nvim",
     "nvim-treesitter/nvim-treesitter-context",
     "eandrju/cellular-automaton.nvim",
